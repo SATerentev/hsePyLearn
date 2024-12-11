@@ -1,8 +1,0 @@
-print('Введите коэф. a b и c:')
-a = int(input('A = '))
-b = int(input('B = '))
-c = int(input('C = '))
-dis = (b * b) - (4 * a * c)
-x1 = ((b * (-1)) - (dis ** 0.5))/(2 * a)
-x2 = ((b * (-1)) + (dis ** 0.5))/(2 * a)
-print('x1 = ' + str(x1) + ', x2 = ' + str(x2))
