@@ -24,7 +24,7 @@ class Client:
     
 clients = []
 
-with open("web_clients_correct.csv", 'r') as csvfile:
+with open("web_clients_correct.csv", "r") as csvfile:
     reader = csv.reader(csvfile)
     for str in reader:
         clients.append(Client(str[0], str[1], str[2], str[3], str[4], str[5], str[6]))
