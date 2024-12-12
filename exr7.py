@@ -14,7 +14,7 @@ class Client:
         elif sex == "male":
             self.sex = "мужского пола"
         elif sex == "sex":
-            print("pizdec chel...")
+            self.sex = "nikakoi"
         else:
             raise IOError("Invalid input")
     
@@ -29,6 +29,10 @@ with open("web_clients_correct.csv", 'r') as csvfile:
     for str in reader:
         clients.append(Client(str[0], str[1], str[2], str[3], str[4], str[5], str[6]))
 
-test = Client("Simon", "mobile", "ChromeForAndroid", "male", 22, 10, "Russia")
-#print(test.get_information())
+clients.remove(clients[0])
+
+with open("result.txt", "w") as txtfile:
+    for client in clients:
+        txtfile.write(client.get_information() + "\n")
+
 print(clients[1].get_information())
